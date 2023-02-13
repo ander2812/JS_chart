@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema de Interacciones Corporativa</title>
+    <link rel="stylesheet" type="text/css" href="Estilo.css">
+    <!-- Include the ECharts file you just downloaded -->
+
+  </head>
+
+  <div class="Cabezote" style=" padding-bottom: 20px; padding-top: 8px;">
+    <img style="vertical-align:middle" src="Imagenes/LogoTQ.png" alt="">
+    <a href="">Planeación Corporativa</a>
+
+  </div>
+
+<body>
+  <script src="https://unpkg.com/gojs@2.3.1/release/go.js"></script>
+  <div id="allSampleContent" class="p-4 w-full">
+    <script src="./graficoTree.js"></script>
+    <script src="https://unpkg.com/gojs@2.3.1/extensions/HyperlinkText.js"></script>
+    <script id="code">
+      function init() {
+
+        // Since 2.2 you can also author concise templates with method chaining instead of GraphObject.make
+        // For details, see https://gojs.net/latest/intro/buildingObjects.html
+        const $ = go.GraphObject.make;  // for conciseness in defining templates
+
+        var diagram = $(go.Diagram, "myDiagramDiv",  // id of DIV
+          { // Automatically lay out the diagram as a tree;
+            // separate trees are arranged vertically above each other.
+            layout: $(go.TreeLayout, { nodeSpacing: 3 })
+          });
+
+        // Define a node template showing class names.
+        // Clicking on the node opens up the documentation for that class.
+        diagram.nodeTemplate =
+          $(go.Node,
+            $("HyperlinkText",
+              // compute the URL to open for the documentation
+              //node => "../api/symbols/" + node.data.key + ".html",
+              node => "../api/symbols/2.html",
+              // define the visuals for the hyperlink, basically the whole node:
+              $(go.Panel, "Auto",
+                $(go.Shape, { fill: "#1F4963", stroke: null }),
+                $(go.TextBlock,
+                  {
+                    font: "bold 13px Helvetica, bold Arial, sans-serif",
+                    stroke: "white", margin: 3
+                  },
+                  new go.Binding("text", "key"))
+              )
+            )
+          );
+
+        // Define a trivial link template with no arrowhead
+        diagram.linkTemplate =
+          $(go.Link,
+            {
+              curve: go.Link.Bezier,
+              toEndSegmentLength: 30, fromEndSegmentLength: 30
+            },
+            $(go.Shape, { strokeWidth: 1.5 }) // the link shape, with the default black stroke
+          );
+
+        // Collect all of the data for the model of the class hierarchy
+        var nodeDataArray = [];
+
+        // Iterate over all of the classes in "go"
+        /*for (k in go) {
+          var cls = go[k];
+          if (!cls) continue;
+          var proto = cls.prototype;
+          if (!proto) continue;
+          if (k === 'EnumValue') continue; // undocumented classes
+          proto.constructor.className = k;  // remember name
+          // find base class constructor
+          var base = Object.getPrototypeOf(proto).constructor;
+          if (base === Object) {  // "root" node?
+            nodeDataArray.push({ key: k });
+          } else {
+            // add a node for this class and a tree-parent reference to the base class name
+            nodeDataArray.push({ key: k, parent: base.className });
+          }
+        }*/
+
+        nodeDataArray.push({ key: 'TQ' });
+        nodeDataArray.push({ key: 'Producción', parent: 'TQ' });
+        nodeDataArray.push({ key: 'Investigación Corporativa', parent: 'TQ' });
+        nodeDataArray.push({ key: 'UP Sólidos', parent: 'Producción' });
+        nodeDataArray.push({ key: 'UP Líquidos', parent: 'Producción' });
+        nodeDataArray.push({ key: 'UP Semi-Solidos', parent: 'Producción' });
+        nodeDataArray.push({ key: 'UP Esteriles', parent: 'Producción' });
+        nodeDataArray.push({ key: 'Cuantitativo', parent: 'Investigación Corporativa' });
+        nodeDataArray.push({ key: 'Cualitativo', parent: 'Investigación Corporativa' });
+        nodeDataArray.push({ key: 'Mixtos', parent: 'Investigación Corporativa' });
+        nodeDataArray.push({ key: 'Lanzamientos', parent: 'UP Sólidos' });
+        nodeDataArray.push({ key: 'Desarrollo Prioritarios', parent: 'UP Sólidos' });
+        nodeDataArray.push({ key: 'Abastecimiento', parent: 'UP Sólidos' });
+        nodeDataArray.push({ key: 'Optimización del costo', parent: 'UP Sólidos' });
+        nodeDataArray.push({ key: 'Proyectos Especiales', parent: 'UP Sólidos' });
+        nodeDataArray.push({ key: 'Lanzamientos', parent: 'UP Líquidos' });
+        nodeDataArray.push({ key: 'Desarrollo Prioritarios', parent: 'UP Líquidos' });
+        nodeDataArray.push({ key: 'Abastecimiento', parent: 'UP Líquidos' });
+        nodeDataArray.push({ key: 'Optimización del costo', parent: 'UP Líquidos' });
+        nodeDataArray.push({ key: 'Proyectos Especiales', parent: 'UP Líquidos' });
+        nodeDataArray.push({ key: 'Lanzamientos', parent: 'UP Semi-Solidos' });
+        nodeDataArray.push({ key: 'Desarrollo Prioritarios', parent: 'UP Semi-Solidos' });
+        nodeDataArray.push({ key: 'Abastecimiento', parent: 'UP Semi-Solidos' });
+        nodeDataArray.push({ key: 'Optimización del costo', parent: 'UP Semi-Solidos' });
+        nodeDataArray.push({ key: 'Proyectos Especiales', parent: 'UP Semi-Solidos' });
+        nodeDataArray.push({ key: 'Lanzamientos', parent: 'UP Esteriles' });
+        nodeDataArray.push({ key: 'Proyectos Especiales', parent: 'UP Esteriles' });
+        nodeDataArray.push({ key: 'Abastecimiento', parent: 'UP Esteriles' });
+        nodeDataArray.push({ key: 'Monitor', parent: 'Cuantitativo' });
+        nodeDataArray.push({ key: 'Volumetrico', parent: 'Cuantitativo' });
+        nodeDataArray.push({ key: 'Tracking Publicitario', parent: 'Cuantitativo' });
+        nodeDataArray.push({ key: 'Oportunidad', parent: 'Cuantitativo' });
+        nodeDataArray.push({ key: 'Pretest', parent: 'Cuantitativo' });
+        nodeDataArray.push({ key: 'Postest', parent: 'Cuantitativo' });
+        nodeDataArray.push({ key: 'Exploratorio', parent: 'Cuantitativo' });
+        nodeDataArray.push({ key: 'Equity', parent: 'Mixtos' });
+        nodeDataArray.push({ key: 'Razón de uso', parent: 'Mixtos' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Lanzamientos' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Lanzamientos' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Lanzamientos' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Lanzamientos' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'GastroIntestinal', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'GastroIntestinal', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'GastroIntestinal', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'GastroIntestinal', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Abastecimiento' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Abastecimiento' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Abastecimiento' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Abastecimiento' });
+        nodeDataArray.push({ key: 'GastroIntestinal', parent: 'Abastecimiento' });
+        nodeDataArray.push({ key: 'GastroIntestinal', parent: 'Abastecimiento' });
+        nodeDataArray.push({ key: 'GastroIntestinal', parent: 'Abastecimiento' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Optimización del costo' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Optimización del costo' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Optimización del costo' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Proyectos Especiales' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Proyectos Especiales' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Proyectos Especiales' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Lanzamientos' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Lanzamientos' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Lanzamientos' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Lanzamientos' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Lanzamientos' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Lanzamientos' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Lanzamientos' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Abastecimiento' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Optimización del costo' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Optimización del costo' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Optimización del costo' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Optimización del costo' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Optimización del costo' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Optimización del costo' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Optimización del costo' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Optimización del costo' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Proyectos Especiales' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Proyectos Especiales' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Proyectos Especiales' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Proyectos Especiales' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Lanzamientos' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Lanzamientos' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Desarrollo prioritarios' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Abastecimiento' });
+        nodeDataArray.push({ key: 'GastroIntestinal', parent: 'Abastecimiento' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Optimización del costo' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Proyectos Especiales' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Proyectos Especiales' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Lanzamientos' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Abastecimiento' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Proyectos Especiales' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Proyectos Especiales' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Proyectos Especiales' });
+        nodeDataArray.push({ key: 'ETQ', parent: 'Proyectos Especiales' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Monitor' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Monitor' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Monitor' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Monitor' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Monitor' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Volumetrico' });
+        nodeDataArray.push({ key: 'GastriIntestinal', parent: 'Tracking Publicitario' });
+        nodeDataArray.push({ key: 'COL', parent: 'ETQ' });
+        nodeDataArray.push({ key: 'COL', parent: 'ETQ' });
+        nodeDataArray.push({ key: 'COL', parent: 'ETQ' });
+        nodeDataArray.push({ key: 'ECU', parent: 'ETQ' });
+        nodeDataArray.push({ key: 'Lurasidona 40 y 80 mg', parent: 'ETQ' });
+        nodeDataArray.push({ key: 'Pylera', parent: 'ETQ' });
+        nodeDataArray.push({ key: 'Naproxeno 750 ER', parent: 'ETQ' });
+
+
+        // Create the model for the hierarchy diagram
+        diagram.model = new go.TreeModel(nodeDataArray);
+
+        /*  // Now collect all node data that are singletons
+          var singlesArray = [];  // for classes that don't inherit from another class
+          diagram.nodes.each(node => {
+            if (node.linksConnected.count === 0) {
+              singlesArray.push(node.data);
+            }
+          });
+    
+          // Remove the unconnected class nodes from the main Diagram
+          diagram.model.removeNodeDataCollection(singlesArray);
+    
+          // Display the unconnected classes in a separate Diagram
+          var singletons =
+            $(go.Diagram, "mySingletons",
+              {
+                nodeTemplate: diagram.nodeTemplate, // share the node template with the main Diagram
+                layout:
+                  $(go.GridLayout,
+                    {
+                      wrappingColumn: 1,  // put the unconnected nodes in a column
+                      spacing: new go.Size(3, 3)
+                    }),
+                model: new go.Model(singlesArray)  // use a separate model
+              });*/
+      }
+      window.addEventListener('DOMContentLoaded', init);
+    </script>
+
+    <div id="sample">
+      <div style="width: 100%; display: flex; justify-content: space-between">
+        <div id="myDiagramDiv"
+          style="flex-grow: 1; height: 725px; margin-right: 4px; border: 1px solid black; position: relative; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);">
+          <canvas tabindex="0" width="873" height="723"
+            style="position: absolute; top: 0px; left: 0px; z-index: 2; user-select: none; touch-action: auto; width: 873px; height: 723px;">This
+            text is displayed if your browser does not support the Canvas HTML element.</canvas>
+          <div style="position: absolute; overflow: auto; width: 890px; height: 723px; z-index: 1;">
+            <div style="position: absolute; width: 1px; height: 1026.76px;"></div>
+          </div>
+        </div>
+
+</body>
+
+</html>

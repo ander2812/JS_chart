@@ -1,0 +1,558 @@
+{
+    "name": "TQ",
+    "children": [
+     {
+      "name": "Producción",
+      "children": [
+       {
+        "name": "UP Sólidos",
+        "children": [
+         {"name": "Lanzamientos",
+         "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "COL",
+                "children": [
+                    {"name": "Bonvent (Montelukast)"},
+                    {"name": "Vertipro (Betahístina)"},
+                    {"name": "Cynetic Pro (Levosulpiride+S+Panc)"}
+                  ]
+                },
+                {"name": "ECU",
+                "children": [
+                    {"name": "Alerfast TAB"}
+                  ]
+                }
+              ]
+            }
+          ]
+         },
+         {"name": "Desarrollo Prioritarios",
+         "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "Lurasidona 40 y 80 mg",
+                "children": [
+                    {"name": "Alerfast TAB"}
+                  ]
+                },
+                {"name": "Pylera",
+                "children": [
+                    {"name": "Alerfast TAB"}
+                  ]
+                },
+                {"name": "Naproxeno 750 ER",
+                "children": [
+                    {"name": "Alerfast TAB"}
+                  ]
+                }
+              ]
+            },
+            {"name": "GastroIntestinal",
+            "children": [
+                {"name": "Antidiarreico 2: Diosmectita (Tipo Muciprost)",
+                "children": [
+                    {"name": "Alerfast TAB"}
+                  ]
+                },
+                {"name": "Antidiarreico 1: Loperamida OTC",
+                "children": [
+                    {"name": "Alerfast TAB"}
+                  ]
+                },
+                {"name": "Lactasa (enzima)",
+                "children": [
+                    {"name": "Alerfast TAB"}
+                  ]
+                },
+                {"name": "Antiácido 1era generación tabletas",
+                "children": [
+                    {"name": "Alerfast TAB"}
+                  ]
+                }
+              ]
+            }
+          ]
+         },
+         {"name": "Abastecimiento",
+         "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "Estabilizar suministro",
+                "children": [
+                    {"name": "Anexia"}
+                  ]
+                },
+                {"name": "Estabilizar suministro",
+                "children": [
+                    {"name": "Alerfast"}
+                  ]
+                },
+                {"name": "Aumento de capacidad",
+                "children": [
+                    {"name": "PEG"}
+                  ]
+                },
+                {"name": "Normalizar entrega muestras médicas",
+                "children": [
+                    {"name": "PEG"}
+                  ]
+                }
+              ]
+            },
+            {"name": "GastroIntestinal",
+            "children": [
+                {"name": "Aumento de capacidad",
+                "children": [
+                    {"name": "SFL Plus"}
+                  ]
+                },
+                {"name": "Mantenimiento de política de inventarios",
+                "children": [
+                    {"name": "SFL Plus"}
+                  ]
+                },
+                {"name": "Mantenimiento de política de inventarios",
+                "children": [
+                    {"name": "Bonfiest Plus"}
+                  ]
+                }
+              ]
+            }
+          ]
+         },
+         {"name": "Optimización del costo",
+         "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "Tamaño óptimo del lote",
+                "children": [
+                    {"name": "PEG"}
+                  ]
+                },
+                {"name": "Mejores negociaciones MP",
+                "children": [
+                    {"name": "PEG"}
+                  ]
+                }
+              ]
+            },
+            {"name": "GastroIntestinal",
+            "children": [
+                {"name": "Reducción del costo directo",
+                "children": [
+                    {"name": "SFL Plus Sobre"}
+                  ]
+                }
+              ]
+            }
+          ]
+         },
+         {"name": "Proyectos Especiales",
+         "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "Migración de nuevos empaques",
+                "children": [
+                    {"name": "Cero Faltantes"}
+                  ]
+                },
+                {"name": "Migración de nuevos empaques",
+                "children": [
+                    {"name": "Fechas Implementación"}
+                  ]
+                }
+              ]
+            },
+            {"name": "GastroIntestinal",
+            "children": [
+                {"name": "SemiAutomatización",
+                "children": [
+                    {"name": "línea Empaque Efervescentes para cambio de facing"}
+                  ]
+                }
+              ]
+            }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "UP Líquidos",
+        "children": [
+          {"name": "Lanzamientos",
+          "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "COL",
+                "children": [
+                    {"name": "Vermec (Meclizina)"},
+                    {"name": "Zinkplus CAPB"}
+                  ]
+                },
+                {"name": "ECU",
+                "children": [
+                    {"name": "Rinaid"},
+                    {"name": "Openxy"},
+                    {"name": "Dexprofen CAPB"}
+                  ]
+                }
+              ]
+            },
+            {"name": "GastroIntestinal",
+            "children": [
+                {"name": "ECU",
+                "children": [
+                    {"name": "Gastrofast"}
+                  ]
+                },
+                {"name": "CAM",
+                "children": [
+                    {"name": "Gastrofast"}
+                  ]
+                }
+              ]
+            }
+          ]
+          },
+          {"name": "Desarrollo Prioritarios",
+          "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "Rinaid AZ",
+                "children": [
+                    {"name": "Gastrofast"}
+                  ]
+                },
+                {"name": "Decadron Concentrado",
+                "children": [
+                    {"name": "Gastrofast"}
+                  ]
+                },
+                {"name": "Rupatadina",
+                "children": [
+                    {"name": "Gastrofast"}
+                  ]
+                },
+                {"name": "Dexiburprofeno",
+                "children": [
+                    {"name": "Gastrofast"}
+                  ]
+                },
+                {"name": "Escitalopram Gotas",
+                "children": [
+                    {"name": "Gastrofast"}
+                  ]
+                }
+              ]
+            }
+           ]
+          },
+          {"name": "Abastecimiento",
+          "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "Normalizar entrega muestras médicas",
+                "children": [
+                    {"name": "Gastrofast"}
+                  ]
+                }
+              ]
+            }
+           ]
+          },
+          {"name": "Optimización del costo",
+           "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "Migración de nuevos empaques",
+                "children": [
+                {"name": "Hidraplus"}
+                    ]
+                }
+              ]
+            },
+            {"name": "GastroIntestinal",
+                "children": [
+                    {"name": "Mejores negociaciones MP",
+                    "children": [
+                        {"name": "Alginatos"},
+                        {"name": "Hidróxido de Magensio"},
+                        {"name": "Hidróxido de Aluminio"},
+                        {"name": "Simeticona"}
+                      ]
+                    },
+                    {"name": "Reducción del costo directo",
+                    "children": [
+                        {"name": "Simeticona"},
+                        {"name": "MK Doss"},
+                        {"name": "Hidróxido de Aluminio"},
+                        {"name": "Sachet GastroFast"}
+                      ]
+                    }
+                  ]
+                }
+              ]
+          },
+          {"name": "Proyectos Especiales",
+           "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "Migración de nuevos empaques",
+                "children": [
+                {"name": "Cero Faltantes"},
+                {"name": "Fechas Implementación"}
+                ]
+                },
+                {"name": "Migración productos",
+                "children": [
+                {"name": "Decadrón óvulos a Capsula Blanda"}
+                ]
+                }
+              ]
+            },
+            {"name": "GastroIntestinal",
+                "children": [
+                    {"name": "Migración de nuevos empaques",
+                    "children": [
+                        {"name": "Gastrofast Plegadiza dispensación"}
+                      ]
+                    }
+                  ]
+                }
+              ]
+          }
+        ]
+       },
+       {
+        "name": "UP Semi-Solidos",
+        "children": [
+           {"name": "Lanzamientos",
+           "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "COL",
+                "children": [
+                {"name": "Nasaler"},
+                {"name": "Eda Biotic"}
+                ]
+                }
+              ]
+            } 
+            ]
+           },
+           {"name": "Desarrollo Prioritarios",
+           "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "Policresuleno gel",
+                "children": [
+                {"name": "Eda Biotic"}
+                ]
+                },
+                {"name": "Ketoprofeno Gel",
+                "children": [
+                {"name": "Eda Biotic"}
+                ]
+                },
+                {"name": "Enzymax",
+                "children": [
+                {"name": "Eda Biotic"}
+                ]
+                },
+                {"name": "Probiotico Alergías",
+                "children": [
+                {"name": "Eda Biotic"}
+                ]
+                },
+                {"name": "Testosterona",
+                "children": [
+                {"name": "Eda Biotic"}
+                ]
+                },
+                {"name": "Tamusolonia + Dutasteride",
+                "children": [
+                {"name": "Eda Biotic"}
+                ]
+                }
+              ]
+            } 
+            ]
+            
+            },
+           {"name": "Abastecimiento",
+           "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "Normalizar entrega muestras médicas",
+                "children": [
+                {"name": "Eda Biotic"}
+                ]
+                }
+              ]
+            },
+            {"name": "GastroIntestinal",
+            "children": [
+                {"name": "Aumento de capacidad",
+                "children": [
+                {"name": "ArmadoLocomotoras R"}
+                ]
+                }
+              ]
+            } 
+            ]
+           },
+           {"name": "Optimización del costo",
+           "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "Cadena de suministro probióticos",
+                "children": [
+                {"name": "ArmadoLocomotoras R"}
+                ]
+                }
+              ]
+            }
+            ]
+            },
+           {"name": "Proyectos Especiales",
+           "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "Migración de nuevos empaques",
+                "children": [
+                {"name": "Cero Faltantes"},
+                {"name": "Fechas Implementación"}
+                ]
+                }
+              ]
+            }
+            ]
+            }
+        ]
+       },
+       {
+        "name": "UP Esteriles",
+        "children": [
+           {"name": "Lanzamientos",
+           "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "COL",
+                "children": [
+                {"name": "Dexprofen Inyectable"}
+                ]
+                }
+              ]
+            }
+            ]
+            },
+           {"name": "Abastecimiento",
+           "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "Normalizar entrega muestras médicas",
+                "children": [
+                {"name": "Dexprofen Inyectable"}
+                ]
+                }
+              ]
+            }
+            ]
+            },
+           {"name": "Proyectos Especiales",
+           "children": [
+            {"name": "ETQ",
+            "children": [
+                {"name": "Migración de nuevos empaques",
+                "children": [
+                {"name": "Cero Faltantes"},
+                {"name": "Fechas Implementación"}
+                ]
+                },
+                {"name": "Traslado Productos",
+                "children": [
+                {"name": "Fixamicin Dol a UP Líquidos"}
+                ]
+                },
+                {"name": "Alternativas de Fabricación",
+                "children": [
+                {"name": "Rinaid"}
+                ]
+                }
+              ]
+            }
+            ] 
+          }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Investigación Corporativa",
+      "value":1234,
+      "children": [
+       {"name": "Cuantitativo",
+       "children": [
+        {"name": "Monitor", 
+        "value": 1983,
+        "children": [
+            {"name": "GastroIntestinal",
+            "children": [
+                {"name": "COL",
+                "children": [
+                    {"name": "SFL", "value": 3},
+                    {"name": "Bonfiest Plus", "value": 3},
+                    {"name": "Gastrofast", "value": 3}
+                 ]
+                },
+                {"name": "ECU",
+                "children": [
+                    {"name": "Bonfiest Plus", "value": 2},
+                    {"name": "Gastrofast", "value": 1}
+                 ]
+                }
+             ]
+            }
+           ]
+        },
+        {"name": "Volumetrico",
+        "children": [
+            {"name": "GastroIntestinal",
+            "children": [
+                {"name": "COL",
+                "children": [
+                    {"name": "SFL Plus", "value": 0},
+                    {"name": "Bonfiest Plus", "value": 0}
+                 ]
+                }
+             ]
+            }
+           ]
+        },
+        {"name": "Tracking Publicitario",
+        "children": [
+            {"name": "GastroIntestinal",
+            "children": [
+                {"name": "COL",
+                "children": [
+                    {"name": "Gastrofast", "value": 0}
+                 ]
+                }
+             ]
+            }
+           ]
+        }
+       ]
+       },
+       {
+        "name": "Mixtos",
+        "children": [
+         {"name": "Equity", "value": 1983},
+         {"name": "Razón de Uso", "value": 2047}
+        ]
+       }
+      ]
+     }
+    ]
+   }  

@@ -1,0 +1,336 @@
+@font-face {
+  font-family: 'Neo Sans Intel';
+  src: url('Tipografias/NeoSansIntel.ttf');
+}
+
+@font-face {
+  font-family: 'Neo Sans Intel Medium';
+  src: url('Tipografias/NeoSansIntel-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Neo Sans Intel Light';
+  src: url('Tipografias/NeoSansIntel-Light.ttf');
+}
+
+
+a{
+  font-family: 'Neo Sans Intel Medium';
+  color: #0f6db2;
+  font-size: 15pt;
+  text-decoration: none;
+  margin-left: 20px;
+
+}
+
+.cabezote{
+
+  margin: 50px;
+  align-items: center;
+
+}
+
+h1{
+
+  font-family: 'Neo Sans Intel Medium';
+  color: #0f6db2;
+  font-size: 30pt;
+  text-align: center;
+
+}
+
+h2{
+
+  font-family: 'Neo Sans Intel Light';
+  color: #0f6db2;
+  font-size: 15pt;
+  text-align: center;
+
+}
+
+h3{
+
+  font-family: 'Neo Sans Intel Light';
+  color: #0f6db2;
+  font-size: 15pt;
+  display: inline-flex;
+  margin-right: 20px;
+
+}
+
+h4{
+
+  font-family: 'Neo Sans Intel Light';
+  color: #0f6db2;
+  font-size: 15pt;
+  margin-right: 20px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+  
+.filtrosP{
+
+  width: 100%;
+  align-items: center;
+
+}
+
+  #container {
+    width: 100%;
+    align-items: center;
+  }
+
+  .busquedatq{
+    display: none;
+    margin: 0 auto;
+  }
+  
+  .compromisoscorp{
+    display: none;
+    margin: 0 auto;
+  }
+
+  .analisisvariables{
+    display: none;
+    margin: 0 auto;
+  }
+
+.filterDiv {
+  background-color: #ffffff;
+  padding:10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  margin: 2px;
+  display: inline-flex;
+  border-style: solid;
+  border-color: #064a80;
+  border-radius: 40px;
+  font-family: 'Neo Sans Intel Light';
+  color: #0f6db2;
+  font-size: 13pt;
+  cursor: pointer;
+  position:relative;
+
+animation:mymove 1s ease-out forwards;
+
+/* Safari and Chrome */
+-webkit-animation:mymove 1s;
+
+}
+
+@keyframes mymove
+{
+from {top:-20px; opacity: 0;}
+to {top:0px; opacity: 1}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+from {top:-20px; opacity: 0;}
+to {top:0px; opacity: 1}
+}
+
+.filterDiv:hover {
+  background-color: #064a80;
+  color: white;
+}
+  
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    margin-left: 7px;
+    background-color: #0f6db2;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Neo Sans Intel Light';
+    font-size: 12pt;
+    background-repeat: no-repeat;
+    display: inline-flex;
+    padding-top: 70px;
+    background-position: center;
+    background-position-y: 15px;
+  }
+
+  .btn.active{
+    background-color: #40a9dd;
+
+  }
+  
+#myBtnContainer{
+  display: table;
+  margin: 0 auto;
+}
+
+  .btn:hover {
+    background-color: #40a9dd;
+  }
+  
+  .etiqueta{
+
+background-color: #40a9dd;
+color: white;
+padding: 6px;
+padding-left: 15px;
+padding-right: 15px;
+border-radius: 30px;
+font-size: 12pt;
+
+  }
+
+.lineamientoCont{
+  width: 60%;
+  margin: -30 auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+  .lineamientoIzq{
+
+    font-family: 'Neo Sans Intel Light';
+    color: white;
+    font-size: 15pt;
+    width: 45%;
+    background-color: #0f6db2;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+
+  }
+  
+  .lineamientoDer{
+
+    font-family: 'Neo Sans Intel Light';
+    color: #0f6db2;
+    font-size: 15pt;
+    width: 50%;
+    background-color: #fcfcfc;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+  }
+
+  .fake{
+
+    display: none;
+  }
+
+  .seleccionado{
+
+    background-color: #064a80;
+    color: white;
+
+  }
+
+.show{
+display: table;
+margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  img{
+    transform: scale(0.6, 0.6);
+  }
+
+  a{
+margin-left: 0px;
+  }
+
+  .cabezote{
+    text-align: center;
+    margin: 20px;
+  }
+
+  h1{
+    font-size: 20pt;
+  }
+
+  #myBtnContainer{
+    text-align:center;
+    margin:auto;
+  }
+
+  .btn {
+    font-size: 10pt;
+    padding: 12px 16px;
+    padding-top: 50px;
+    background-size: 30px;
+    margin-left: 4px;
+    margin-top: 4px;
+  }
+
+  .filterDiv {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 2px;
+    display: inline-flex;
+    font-size: 12pt;
+  }
+
+  /* Tamanos de subfiltros */
+
+  .busquedatq{
+    text-align: center;
+  }
+  
+  .compromisoscorp{
+    text-align: center;
+  }
+
+  .analisisvariables{
+    text-align: center;
+  }
+
+  .fake{
+
+    display: none;
+  }
+
+  /* Contenedores lineamientos */
+
+
+  h4{
+    width: 95%;
+  
+  }
+ 
+  .lineamientoCont{
+    width: 95%;
+    margin: -25 auto;
+  
+  }
+  
+    .lineamientoIzq{
+      font-size: 13pt;
+      padding: 15px;
+  
+    }
+
+    .lineamientoDer{
+      font-size: 13pt;
+      padding: 15px;
+    }
+
+    .etiqueta{
+      padding: 4px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 30px;
+      font-family: 'Neo Sans Intel Light';
+      font-size: 9pt;
+        }
+
+}
+
+
+  
+  
